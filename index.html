@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./styles/style.css" />
     </head>
     <body>
+        <!-- 헤더 -->
         <header>
             <img src="./images/logo.png" alt="로고" />
             <button class="nav-header">
@@ -93,16 +94,42 @@
                             Blog post
                         </strong>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text 
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text
                         </p>
                     </div>
-                    <div class="newsletter-form">
-                        <input type="email">
-                        <button class="Subscribe">Subscribe</button>
-                    </div>
+
+                    <form class="newsletter-form">
+                        <input
+                            type="email"
+                            placeholder="Enter your email address"
+                            required/>
+
+                        <!-- 모달 토글 -->
+                        <input type="checkbox" id="modal-toggle" hidden />
+
+                        <!-- Subscribe 버튼 -->
+                        <label for="modal-toggle" class="btn subscribe-btn">
+                            Subscribe
+                        </label>
+                    </form>
                 </section>
 
+<!-- 모달 -->
+    <section class="modal">
+        <div class="modal-box">
+            <img src="./images/icon-cat.png" alt="" />
+            <h3>Thank you!</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
+
+            <!-- 모달 닫기 -->
+            <label for="modal-toggle" class="btn modal-ok">
+                OK! I love HODU
+            </label>
+        </div>
+    </section>
+
+                <!-- 배경 이미지 -->
                 <img src="./images/img_5.png" alt="cat face">
             </div>
         </main>
