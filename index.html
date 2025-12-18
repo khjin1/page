@@ -9,22 +9,33 @@
     </head>
     <body>
         <!-- 헤더 -->
-        <header>
+        <header class="site-header">
             <img src="./images/logo.png" alt="로고" />
-            <button class="nav-header">
-                <div class="menu">
-                    <div class="menu-header"></div>
-                    <div class="menu-list">
-                        <ul>
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Support</li>
-                        </ul>
-                    </div>
-                    <button class="Download">Download</button>
-                </div>
-            </button>
+
+            <!-- 메뉴 토글용 체크박스 -->
+            <input type="checkbox" id="nav-toggle" hidden />
+
+            <!-- 햄버거 버튼 -->
+            <label for="nav-toggle" class="nav-btn">
+                ☰
+                <span class="sr-only"></span>
+            </label>
         </header>
+
+        <!-- 메뉴 탭 -->
+        <nav class="nav-menu">
+            <div class="menu-header">
+                <label for="nav-toggle" class="close-btn">✕</label>
+            </div>
+
+            <ul class="menu-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+
+            <button class="download">Download</button>
+        </nav>
 
         <main>
 
