@@ -157,44 +157,277 @@ section {
     letter-spacing: 0;
 }
 
+/* Feature2 섹션 */
+.feature2 {
+    padding: 48px 20px;
+    text-align: center;
+}
 
-/* 카드 그리드 */
+.feature-header strong {
+    color: #d4835f;
+    display: block;
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 12px;
+}
+
+.feature-header p {
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 32px;
+}
+
+.feature-header span {
+    color: #d4835f;
+    font-weight: 700;
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 24px;
+    margin-bottom: 32px;
 }
 
 .card-grid img {
-    width: 100%;
-    border-radius: 16px;
+    width: 260px;
+    height: 260px;
+    border-radius: 18px;
+    object-fit: cover;
+    margin: 0 auto;
 }
 
-/* 뉴스레터 섹션 */
-.feature3 {
-    background: var(--dark);
+.feature-footer p {
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 24px;
+}
+
+.Learnmore {
+    width: 126px;
+    height: 40px;
+    padding: 10px 24px;
+    border-radius: 40px;
+    background: #d4835f;
     color: #fff;
-    padding: 40px 24px;
-    border-radius: 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Feature3 섹션 */
+.feature3 {
+    width: 326px;
+    height: 348px;
+    margin: 0 auto;
+    padding: 36px 32px;
+    background: #f6efe2;
+    border-radius: 18px;
+}
+
+.newsletter-content {
+    width: 262px;
+    height: 156px;
+    margin-bottom: 30px;
+}
+
+.newsletter-content strong {
+    display: block;
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 12px;
+}
+
+.newsletter-content p {
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 24px;
+    width: 262px;
+    height: 96px;
 }
 
-.newsletter-form input {
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
+.newsletter-form input[type="email"] {
+    width: 262px;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 60px;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+    font-size: 14px;
 }
+
+.subscribe-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 117px;
+    height: 40px;
+    padding: 10px 24px;
+    border-radius: 40px;
+    background: #d4835f;
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* 모달 */
+.modal-box {
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    border-radius: 30px;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.modal-box img {
+    width: 60px;
+    height: 62px;
+    margin-bottom: 16px;
+}
+
+.modal-box h3 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+}
+
+.modal-box p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.modal-ok {
+    display: inline-flex;
+    width: 163px;
+    height: 40px;
+    border-radius: 40px;
+    background: #d4835f;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+/* 에러 메시지 숨김 */
+.error-msg {
+    display: none;
+    font-size: 12px;
+    color: red;
+    margin-top: 8px;
+}
+
+/* 모달 숨김 */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+/* invalid 상태 */
+.email-input:invalid ~ .error-msg {
+    display: block;
+}
+
+/* invalid일 때 버튼 비활성화 느낌 */
+.email-input:invalid ~ .subscribe-btn {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* 이메일이 유효하고 체크되면 모달 열림 */
+.email-input:valid ~ #modal-toggle:checked ~ .modal {
+    display: flex;
+}
+
+/* 배경 이미지 */
+.main-bg {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main-bg img {
+    width: 390px;
+    height: 241px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+/* 푸터 */
+footer {
+    width: 100%;
+    height: 178px;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+footer .left {
+    width: 176px;
+    height: 124px;
+}
+
+footer .left img {
+    width: 112px;
+    height: 34px;
+    display: block;
+}
+
+.social-icons {
+    margin-top: 58px;
+    display: flex;
+    gap: 16px;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+}
+
+/* footer nav (모바일만 보임) */
+.footer-nav ul {
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer-nav li {
+    margin-bottom: 8px;
+}
+
+/* 스크롤 탑 버튼 숨김 */
+.scroll-top {
+    display: none;
+}
+
 
 /* 데스크탑 */
 @media (min-width: 1024px) {
 
-    /* 히어로 섹션 */
+    /* 메인 */
     .hero {
         display: flex;
         align-items: center;
@@ -252,21 +485,187 @@ section {
         margin: 0 auto;
     }
 
-    .card-grid {
-        grid-template-columns: repeat(3, 1fr);
+    /* Feature2 섹션 */
+    .feature2 {
+        padding: 120px 0;
     }
 
+    .feature-header strong {
+        font-size: 48px;
+        line-height: 64px;
+        margin-bottom: 16px;
+    }
+
+    .feature-header p {
+        max-width: 720px;
+        margin: 0 auto 64px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        justify-items: center;
+        margin-bottom: 64px;
+    }
+
+    .card-grid img {
+        width: 378px;
+        height: 378px;
+        border-radius: 30px;
+    }
+
+    .feature-footer p {
+        max-width: 720px;
+        margin: 0 auto 40px;
+    }
+
+    .Learnmore {
+        width: 149px;
+        height: 50px;
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    /* Feature3 섹션 */
     .feature3 {
+        width: 1280px;
+        height: 200px;
+        padding: 50px 60px;
+        border-radius: 0;
+
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+    }
+
+    .newsletter-content {
+        width: 490px;
+        height: 100px;
+        margin-bottom: 0;
+    }
+
+    .newsletter-content strong {
+        font-size: 36px;
+        line-height: 48px;
+        margin-bottom: 8px;
+    }
+
+    .newsletter-content p {
+        font-size: 14px;
+        line-height: 20px;
     }
 
     .newsletter-form {
-        flex-direction: row;
+        width: 530px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-radius: 60px;
+        padding: 5px;
     }
 
-    .newsletter-form input {
-        width: 280px;
+    .newsletter-form input[type="email"] {
+        width: 520px;
+        height: 50px;
+        margin-bottom: 0;
+        border-radius: 60px;
+        border: none;
+        padding: 0 20px;
+        font-size: 14px;
     }
+
+    .subscribe-btn {
+        width: 138px;
+        height: 50px;
+        padding: 0;
+        border-radius: 40px;
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+
+    /* 모달 */
+    .modal-box {
+        width: 600px;
+        height: 400px;
+        padding: 60px;
+    }
+
+    .modal-box img {
+        width: 110px;
+        height: 112px;
+    }
+
+    .modal-box h3 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .modal-ok {
+        width: 191px;
+        height: 52px;
+    }
+
+    /* 배경 이미지 */
+    .main-bg img {
+        width: 1920px;
+        height: 340px;
+    }
+
+    /* 푸터 */
+    footer {
+        height: 160px;
+        padding: 0 320px;
+        align-items: center;
+    }
+
+    footer .left {
+        width: auto;
+        height: auto;
+    }
+
+    footer .left img {
+        width: 226px;
+        height: 70px;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .social-icons img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* 데스크탑에서는 nav 숨김 */
+    .footer-nav {
+        display: none;
+    }
+
+    /* 스크롤 탑 버튼 */
+    .scroll-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    z-index: 100;
+}
+
+.scroll-top img {
+    width: 24px;
+    height: 24px;
+}
+
+.scroll-top:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
 }

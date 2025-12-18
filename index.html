@@ -37,8 +37,8 @@
             <button class="download">Download</button>
         </nav>
 
+        <!-- 메인 -->
         <main>
-
             <section class="hero">
                 <div class="content">
                     <h2>
@@ -60,6 +60,7 @@
 
             <div class="container">
 
+                <!-- Feature1 섹션 -->
                 <section class="feature1">
                     <img src="./images/img_4.png" alt="bed cat">
                     <strong>
@@ -71,6 +72,7 @@
                     </p>
                 </section>
 
+                <!-- Feature2 섹션 -->
                 <section class="feature2">
                     <div class="feature-header">
                         <strong>
@@ -98,6 +100,7 @@
                     </div>
                 </section>
 
+                <!-- Feature3 섹션 -->
                 <section class="feature3">
                     <div class="newsletter-content">
                         <strong>
@@ -114,7 +117,9 @@
                         <input
                             type="email"
                             placeholder="Enter your email address"
-                            required/>
+                            required
+                            class="email-input"
+                        />
 
                         <!-- 모달 토글 -->
                         <input type="checkbox" id="modal-toggle" hidden />
@@ -123,10 +128,13 @@
                         <label for="modal-toggle" class="btn subscribe-btn">
                             Subscribe
                         </label>
+
+                        <!-- 에러 메시지 -->
+                    <p class="error-msg">Please enter a valid email address.</p>
                     </form>
                 </section>
 
-<!-- 모달 -->
+    <!-- 모달 -->
     <section class="modal">
         <div class="modal-box">
             <img src="./images/icon-cat.png" alt="" />
@@ -141,7 +149,14 @@
     </section>
 
                 <!-- 배경 이미지 -->
-                <img src="./images/img_5.png" alt="cat face">
+                <div class="main-bg">
+                    <img src="./images/img_5.png" alt="cat face">
+                </div>
+
+                <!-- scroll top -->
+                <a href="#top" class="scroll-top">
+                    <img src="./images/scroll-top-btn.png" alt="페이지 상단으로 이동">
+                </a>
             </div>
         </main>
         
