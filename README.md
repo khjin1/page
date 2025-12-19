@@ -1,0 +1,103 @@
+# 🐱 랜딩 페이지 퍼블리싱 프로젝트
+
+반응형 웹과 접근성을 고려하여 제작한 랜딩 페이지입니다.  
+모바일 퍼스트 방식으로 설계되었으며,
+메뉴 토글, 이메일 유효성 검사, 모달 UI를 구현했습니다.
+
+---
+
+## 📌 프로젝트 개요
+
+- 프로젝트명: Cat Landing Page
+- 목적: 반응형 웹 퍼블리싱 연습 및 CSS 인터랙션 구현
+- 형태: 단일 페이지 랜딩 페이지
+- 기술 스택:
+  - HTML5 (Semantic Markup)
+  - CSS3 (Flexbox, Grid, Media Query)
+  - JavaScript ❌ (미사용)
+
+---
+
+## 📱 주요 기능
+
+### 1. 반응형 레이아웃
+- 모바일
+  - 햄버거 메뉴
+  - 세로 스택 레이아웃
+- 데스크탑
+  - 가로 네비게이션
+  - 콘텐츠 좌우 분할 레이아웃
+
+---
+
+### 2. CSS-only 네비게이션 메뉴
+- `input[type="checkbox"]` + `label` 활용
+- JavaScript 없이 모바일 메뉴 열고 닫기 구현
+
+
+3. Hero 섹션
+
+메인 카피 + 다운로드 버튼
+
+모바일: 중앙 정렬
+
+데스크탑: 텍스트 왼쪽 / 이미지 오른쪽
+
+4. Feature 섹션 구성
+
+Feature 1: 이미지 + 텍스트 설명
+
+Feature 2: 카드형 이미지 Grid
+
+Feature 3: 뉴스레터 구독 UI
+
+5. 이메일 유효성 검사 & 모달 (CSS only)
+
+:valid, :invalid 상태 활용
+
+이메일이 유효할 때만 모달 오픈
+
+6. Scroll To Top 버튼
+
+데스크탑에서만 노출
+
+position: fixed 사용
+
+
+
+🎯 퍼블리싱 포인트
+
+시멘틱 태그 적극 사용 (header, main, section, footer)
+
+모바일 퍼스트 설계
+
+CSS Grid + Flexbox 혼합 사용
+
+접근성을 고려한 alt, label 구조
+
+재사용 가능한 CSS 변수(:root) 관리
+
+🚀 실행 방법
+git clone 레포지토리주소
+cd project
+open index.html
+
+✨ 미리보기
+
+브라우저에서 index.html 파일을 열어 확인할 수 있습니다.
+
+📝 개선 가능 사항
+
+스크롤 애니메이션 추가
+
+실제 이메일 전송 기능 연동
+
+Lighthouse 접근성 점수 개선
+
+다크모드 지원
+
+👩‍💻 제작자
+
+퍼블리싱 연습용 개인 프로젝트
+
+HTML / CSS 기반 랜딩 페이지 구현
