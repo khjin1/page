@@ -48,7 +48,6 @@ header {
     transform: translateX(0);
 }
 
-/* 헤더 */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -63,6 +62,7 @@ header {
 }
 
 /* 메인 */
+/* Hero 섹션 */
 .hero {
     padding: 48px 20px;
     background: #f6efe2;
@@ -73,6 +73,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 320px; 
+    margin: 0 auto;
+    text-align: center;
 }
 
 .hero h2 {
@@ -112,9 +115,9 @@ header {
 .hero img {
     width: 205.5px;
     height: 362px;
-    margin-top: 32px;
+    display: block;
+    margin: 32px auto 0; 
 }
-
 
 /* Feature 섹션 공통 */
 section {
@@ -132,11 +135,12 @@ section {
 }
 
 .feature1 img {
+    display: block;
     width: 326px;
     height: 190px;
     border-radius: 18px;
     object-fit: cover;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
 }
 
 .feature1 strong {
@@ -191,6 +195,7 @@ section {
     grid-template-columns: 1fr;
     gap: 24px;
     margin-bottom: 32px;
+    justify-items: end;
 }
 
 .card-grid img {
@@ -198,7 +203,13 @@ section {
     height: 260px;
     border-radius: 18px;
     object-fit: cover;
-    margin: 0 auto;
+    margin: 0;
+}
+
+.feature-footer {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
 }
 
 .feature-footer p {
@@ -207,6 +218,8 @@ section {
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 24px;
+    flex: 1;
+    margin-bottom: 0; 
 }
 
 .Learnmore {
@@ -228,8 +241,11 @@ section {
     height: 348px;
     margin: 0 auto;
     padding: 36px 32px;
-    background: #f6efe2;
+    background: #263140;
+    color: #fff;
     border-radius: 18px;
+    position: relative;
+    z-index: 10;
 }
 
 .newsletter-content {
@@ -265,6 +281,7 @@ section {
     padding: 0 16px;
     border-radius: 60px;
     border: 1px solid #ccc;
+    color: #263140;
     margin-bottom: 16px;
     font-size: 14px;
 }
@@ -365,6 +382,9 @@ section {
 .main-bg {
     width: 100%;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin-top: -120px;
 }
 
 .main-bg img {
@@ -408,6 +428,11 @@ footer .left img {
 }
 
 /* footer nav (모바일만 보임) */
+.footer-nav {
+    margin-left: auto;
+    text-align: right;
+}
+
 .footer-nav ul {
     font-family: "Spoqa Han Sans Neo", sans-serif;
     font-size: 14px;
@@ -427,6 +452,49 @@ footer .left img {
 /* 데스크탑 */
 @media (min-width: 1024px) {
 
+    /* 헤더 */
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;  
+        transform: none;           
+        background: transparent;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        height: auto;
+        padding: 0;
+    }
+
+    .menu-header {
+        display: none;
+    }
+
+    .menu-list {
+        display: flex;
+        gap: 24px;
+    }
+
+    .menu-list a {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+    }
+
+  /* Download 버튼 헤더용 스타일 */
+    .nav-menu .download {
+        margin-left: 16px;
+        padding: 10px 24px;
+        border-radius: 999px;
+        background: #d4835f;
+        color: #fff;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
     /* 메인 */
     .hero {
         display: flex;
@@ -438,7 +506,9 @@ footer .left img {
 
     .hero .content {
         align-items: flex-start;
+        text-align: left;
         max-width: 520px;
+        margin: 0;
     }
 
     .hero h2 {
@@ -449,8 +519,9 @@ footer .left img {
 
     .hero p {
         font-size: 16px;
-        line-height: 24px;
+        line-height: 22px;
         margin-bottom: 40px;
+        max-width: 480px;
     }
 
     .hero img {
@@ -461,14 +532,19 @@ footer .left img {
 
     /* Feature1 섹션 */
     .feature1 {
-        padding: 80px 0;
+        display: flex;
+        align-items: center;
+        gap: 80px;  
+        padding: 80px 120px;
+        text-align: left;
     }
 
     .feature1 img {
         width: 660px;
         height: 390px;
         border-radius: 30px;
-        margin-bottom: 40px;
+        margin: 0;      
+        flex-shrink: 0;
     }
 
     .feature1 strong {
@@ -484,6 +560,10 @@ footer .left img {
         max-width: 520px;
         margin: 0 auto;
     }
+
+    .feature1 .text {
+        max-width: 520px;
+}
 
     /* Feature2 섹션 */
     .feature2 {
@@ -514,6 +594,12 @@ footer .left img {
         border-radius: 30px;
     }
 
+    .feature-footer {
+        max-width: 960px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
     .feature-footer p {
         max-width: 720px;
         margin: 0 auto 40px;
@@ -542,6 +628,8 @@ footer .left img {
         width: 490px;
         height: 100px;
         margin-bottom: 0;
+        border-radius: 60px;
+        padding: 6px;
     }
 
     .newsletter-content strong {
@@ -561,7 +649,7 @@ footer .left img {
         display: flex;
         align-items: center;
         background: #fff;
-        border-radius: 60px;
+        border-radius: 100px;
         padding: 5px;
     }
 
@@ -614,29 +702,33 @@ footer .left img {
 
     /* 푸터 */
     footer {
-        height: 160px;
-        padding: 0 320px;
+        display: flex;
+        height: auto;
+        padding: 40px 320px;
         align-items: center;
     }
 
     footer .left {
-        width: auto;
-        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     footer .left img {
-        width: 226px;
-        height: 70px;
+        width: 160px;
+        height: auto;
     }
 
     .social-icons {
-        margin-top: 20px;
+        margin-top: 0;
+        display: flex;
         gap: 20px;
     }
 
     .social-icons img {
-        width: 40px;
-        height: 40px;
+        width: 24px;
+        height: 24px;
     }
 
     /* 데스크탑에서는 nav 숨김 */
